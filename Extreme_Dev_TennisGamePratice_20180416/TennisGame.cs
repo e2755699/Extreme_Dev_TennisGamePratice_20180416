@@ -4,7 +4,7 @@
     {
         public string Scroe()
         {
-            throw new System.NotImplementedException();
+            return "Love All";
         }
     }
 }
