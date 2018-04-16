@@ -23,9 +23,16 @@ namespace Extreme_Dev_TennisGamePratice_20180416
         [TestMethod]
         public void Thirty_Love()
         {
-            tennisGame.FirstPlayerScore();
-            tennisGame.FirstPlayerScore();
+            GivenFirstPlayerScore(2);
             ScoreShouldBe("Thirty Love");
+        }
+
+        private void GivenFirstPlayerScore(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                tennisGame.FirstPlayerScore();
+            }
         }
 
         private void ScoreShouldBe(string expected)

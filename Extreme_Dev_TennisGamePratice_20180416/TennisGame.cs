@@ -1,4 +1,6 @@
-﻿namespace Extreme_Dev_TennisGamePratice_20180416
+﻿using System.Collections.Generic;
+
+namespace Extreme_Dev_TennisGamePratice_20180416
 {
     public class TennisGame
     {
@@ -6,13 +8,14 @@
 
         public string Scroe()
         {
-            if (_firstPlayerScore == 2)
+            var scoreLookup = new Dictionary<int, string>
             {
-                return "Thirty Love";
-            }
-            if (_firstPlayerScore == 1)
+                {1, "Fifteen"},
+                {2, "Thirty"}
+            };
+            if (_firstPlayerScore > 0)
             {
-                return "Fifteen Love";
+                return scoreLookup[_firstPlayerScore] + " Love";
             }
             return "Love All";
         }
