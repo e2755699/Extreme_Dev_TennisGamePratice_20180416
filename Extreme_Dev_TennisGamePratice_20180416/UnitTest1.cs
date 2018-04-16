@@ -5,12 +5,17 @@ namespace Extreme_Dev_TennisGamePratice_20180416
     [TestClass]
     public class UnitTest1
     {
+        private TennisGame tennisGame = new TennisGame();
+
         [TestMethod]
         public void Love_All()
         {
-            TennisGame tennisGame = new TennisGame();
-            var scroe = tennisGame.Scroe();
-            Assert.AreEqual("Love All", scroe);
+            ScoreShouldBe("Love All");
+        }
+
+        private void ScoreShouldBe(string expected)
+        {
+            Assert.AreEqual(expected, tennisGame.Scroe());
         }
     }
 }
