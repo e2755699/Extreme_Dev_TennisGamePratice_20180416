@@ -79,6 +79,14 @@ namespace Extreme_Dev_TennisGamePratice_20180416
             ScoreShouldBe("Deuce");
         }
 
+        [TestMethod]
+        public void Deuce_when_4_4()
+        {
+            GivenFirstPlayerScore(4);
+            GivenSecondPlayerScore(4);
+            ScoreShouldBe("Deuce");
+        }
+
         private void GivenSecondPlayerScore(int times)
         {
             for (int i = 0; i < times; i++)
