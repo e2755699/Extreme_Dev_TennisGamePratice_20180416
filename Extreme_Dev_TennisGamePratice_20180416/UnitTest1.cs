@@ -34,6 +34,21 @@ namespace Extreme_Dev_TennisGamePratice_20180416
             ScoreShouldBe("Forty Love");
         }
 
+        [TestMethod]
+        public void Love_Fifteen()
+        {
+            tennisGame.SecondPlayerScore();
+            ScoreShouldBe("Love Fifteen");
+        }
+
+        [TestMethod]
+        public void Love_Thirty()
+        {
+            tennisGame.SecondPlayerScore();
+            tennisGame.SecondPlayerScore();
+            ScoreShouldBe("Love Thirty");
+        }
+
         private void GivenFirstPlayerScore(int times)
         {
             for (int i = 0; i < times; i++)

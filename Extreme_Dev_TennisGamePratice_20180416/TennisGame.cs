@@ -10,11 +10,21 @@ namespace Extreme_Dev_TennisGamePratice_20180416
         {
             {1, "Fifteen"},
             {2, "Thirty"},
-            {3, "Forty"}
+            {3, "Forty"},
         };
+
+        private int _secondPlayerScore;
 
         public string Scroe()
         {
+            if (_secondPlayerScore == 2)
+            {
+                return "Love Thirty";
+            }
+            if (_secondPlayerScore == 1)
+            {
+                return "Love Fifteen";
+            }
             if (_firstPlayerScore > 0)
             {
                 return _scoreLookup[_firstPlayerScore] + " Love";
@@ -25,6 +35,11 @@ namespace Extreme_Dev_TennisGamePratice_20180416
         public void FirstPlayerScore()
         {
             _firstPlayerScore++;
+        }
+
+        public void SecondPlayerScore()
+        {
+            _secondPlayerScore++;
         }
     }
 }
