@@ -18,6 +18,10 @@ namespace Extreme_Dev_TennisGamePratice_20180416
 
         public string Scroe()
         {
+            if (_firstPlayerScore == 2 && _secondPlayerScore == 2)
+            {
+                return "Thirty All";
+            }
             if (_firstPlayerScore == 1 && _secondPlayerScore == 1)
             {
                 return "Fifteen All";
