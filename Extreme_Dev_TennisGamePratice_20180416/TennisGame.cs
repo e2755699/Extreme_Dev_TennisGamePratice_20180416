@@ -8,6 +8,7 @@ namespace Extreme_Dev_TennisGamePratice_20180416
 
         private Dictionary<int, string> _scoreLookup = new Dictionary<int, string>
         {
+            {0, "Love"},
             {1, "Fifteen"},
             {2, "Thirty"},
             {3, "Forty"},
@@ -17,6 +18,10 @@ namespace Extreme_Dev_TennisGamePratice_20180416
 
         public string Scroe()
         {
+            if (_firstPlayerScore != _secondPlayerScore)
+            {
+                return _scoreLookup[_firstPlayerScore] + " " + _scoreLookup[_secondPlayerScore];
+            }
             if (_secondPlayerScore > 0)
             {
                 return "Love " + _scoreLookup[_secondPlayerScore];
