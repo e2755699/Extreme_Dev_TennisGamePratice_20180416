@@ -18,15 +18,16 @@ namespace Extreme_Dev_TennisGamePratice_20180416
 
         public string Scroe()
         {
-            if (_firstPlayerScore == _secondPlayerScore)
+            if (isSameScore())
             {
                 return _scoreLookup[_firstPlayerScore] + " All";
             }
-            if (_firstPlayerScore != _secondPlayerScore)
-            {
-                return _scoreLookup[_firstPlayerScore] + " " + _scoreLookup[_secondPlayerScore];
-            }
-            return "Love All";
+            return _scoreLookup[_firstPlayerScore] + " " + _scoreLookup[_secondPlayerScore];
+        }
+
+        private bool isSameScore()
+        {
+            return _firstPlayerScore == _secondPlayerScore;
         }
 
         public void FirstPlayerScore()
