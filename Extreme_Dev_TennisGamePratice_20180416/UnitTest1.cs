@@ -55,6 +55,14 @@ namespace Extreme_Dev_TennisGamePratice_20180416
             ScoreShouldBe("Love Forty");
         }
 
+        [TestMethod]
+        public void Fiftten_All()
+        {
+            GivenFirstPlayerScore(1);
+            GivenSecondPlayerScore(1);
+            ScoreShouldBe("Fifteen All");
+        }
+
         private void GivenSecondPlayerScore(int times)
         {
             for (int i = 0; i < times; i++)
