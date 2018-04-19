@@ -20,7 +20,7 @@ namespace Extreme_Dev_TennisGamePratice_20180416
         {
             if (isSameScore())
             {
-                if (_firstPlayerScore >= 3)
+                if (_firstPlayerScore == 3)
                 {
                     return "Deuce";
                 }
