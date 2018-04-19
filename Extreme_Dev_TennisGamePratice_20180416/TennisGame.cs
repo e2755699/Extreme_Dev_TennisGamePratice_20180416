@@ -17,13 +17,9 @@ namespace Extreme_Dev_TennisGamePratice_20180416
 
         public string Scroe()
         {
-            if (_secondPlayerScore == 2)
+            if (_secondPlayerScore > 0)
             {
-                return "Love Thirty";
-            }
-            if (_secondPlayerScore == 1)
-            {
-                return "Love Fifteen";
+                return "Love " + _scoreLookup[_secondPlayerScore];
             }
             if (_firstPlayerScore > 0)
             {
